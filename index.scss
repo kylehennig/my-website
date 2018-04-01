@@ -1,14 +1,16 @@
-:root {
-    /* Colors */
-    --dark: #343a40;
-    --primary: #586297;
-    --secondary: #868e96;
-}
+/* Colors */
+$primary: #586297;
+$secondary: #868e96;
+$dark: #343a40;
+
+/* Fonts */
+$sans-serif-fonts: "Open Sans", sans-serif;
+$serif-fonts: "Saira Extra Condensed", serif;
 
 body {
-    color: var(--dark);
+    color: $dark;
     display: grid;
-    font-family: 'Open Sans', sans-serif;
+    font-family: $sans-serif-fonts;
     font-size: 100%;
     grid-template-columns: 17rem auto;
     margin: 0;
@@ -22,7 +24,7 @@ section {
 }
 
 h1 {
-    font-family: 'Saira Extra Condensed', serif;
+    font-family: $serif-fonts;
     font-size: 3rem;
     font-weight: 700;
     margin: 0;
@@ -30,8 +32,8 @@ h1 {
 }
 
 h2 {
-    color: var(--secondary);
-    font-family: 'Saira Extra Condensed', serif;
+    color: $secondary;
+    font-family: $serif-fonts;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -42,7 +44,7 @@ p {
 
 .sidebar {
     align-items: center;
-    background-color: var(--primary);
+    background-color: $primary;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -90,11 +92,11 @@ p {
 }
 
 .about__name--emphasis {
-    color: var(--primary);
+    color: $primary;
 }
 
 .about__title {
-    color: var(--secondary);
+    color: $secondary;
 }
 
 .skills__title {
@@ -102,12 +104,12 @@ p {
 }
 
 .skills__icons {
-    color: var(--secondary);
+    color: $secondary;
     font-size: 3rem;
 }
 
 .skills__icons .devicons:hover {
-    color: var(--primary);
+    color: $primary;
 }
 
 @media only screen and (max-width: 600px) {
