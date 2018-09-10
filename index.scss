@@ -4,8 +4,7 @@ $secondary: #868e96;
 $dark: #343a40;
 
 /* Fonts */
-$sans-serif-fonts: "Open Sans", sans-serif;
-$serif-fonts: "Saira Extra Condensed", serif;
+$sans-serif-fonts: "Source Sans Pro", sans-serif;
 
 body {
     color: $dark;
@@ -17,27 +16,19 @@ body {
 
 section {
     border-bottom: 1px solid #dee2e6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     min-height: 100vh;
-    padding: 0 0 0 3rem;
+    padding: 0 6rem 0 6rem;
 }
 
 h1 {
-    font-family: $serif-fonts;
-    font-size: 3rem;
-    font-weight: 700;
-    margin: 0;
-    text-transform: uppercase;
+    font-weight: 600;
 }
 
 h2 {
-    color: $secondary;
-    font-family: $serif-fonts;
-    font-weight: 500;
-    text-transform: uppercase;
-}
-
-p {
-    margin: 0;
+    font-weight: 300;
 }
 
 .sidebar {
@@ -56,13 +47,13 @@ p {
 
 .sidebar__logo {
     border-radius: 50%;
-    border: 0.5rem solid rgba(255,255,255,.2);
+    border: 0.5rem solid rgba(255, 255, 255, .2);
     margin-bottom: 0.5rem;
 }
 
 .sidebar__link {
     color: white;
-    font-weight: 600;
+    font-weight: 300;
     margin-top: 1rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -79,29 +70,25 @@ p {
     top: 0;
 }
 
-.about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.about__name {
-    font-size: 6rem;
-    line-height: 5.5rem;
+.about__greeting {
+    color: $dark;
+    font-family: $sans-serif-fonts;
+    font-size: 2.5rem;
+    font-weight: 300;
     margin: 0;
     padding: 0;
 }
 
-.about__name--emphasis {
-    color: $primary;
+.about__tagline {
+    color: $dark;
+    font-family: $sans-serif-fonts;
+    font-size: 2.5rem;
+    font-weight: 300;
+    max-width: 700px;
 }
 
-.about__title {
-    color: $secondary;
-}
-
-.skills__title {
-    padding-top: 3rem;
+.about__tagline--emphasis {
+    font-weight: bold;
 }
 
 .skills__icons {
@@ -113,29 +100,20 @@ p {
     color: $primary;
 }
 
-@media only screen and (max-width: 600px) {
-    body {
-        display: block;
+@media only screen and (max-width: 768px) {
+    section {
+        padding: 0 3rem 0 3rem;
     }
-    
+
     .sidebar {
-        display: flex;
-        flex-direction: row;
-        height: inherit;
-        justify-content: center;
-        position: static;
-        width: 100%;
-    }
-    
-    .sidebar__logo {
         display: none;
-    }
-    
-    .sidebar__link {
-        margin-top: 0;
     }
 
     .page-content {
         position: static;
+    }
+
+    .about__greeting, .about__tagline {
+        font-size: 2rem;
     }
 }
