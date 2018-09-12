@@ -5,6 +5,7 @@ $dark: #343a40;
 
 /* Fonts */
 $sans-serif-fonts: "Source Sans Pro", sans-serif;
+$monospace-fonts: "Inconsolata", monospace;
 
 body {
     color: $dark;
@@ -107,6 +108,34 @@ h2 {
     min-width: 200px;
 }
 
+.job {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 10px 0;
+    max-width: 700px;
+}
+
+.job__placement {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.job__company {
+    font-weight: 600;
+    margin: 0;
+}
+
+.job__date {
+    font-family: $monospace-fonts;
+    margin: 0;
+    text-align: right;
+}
+
+.job__title {
+    margin: 0;
+}
+
 @media only screen and (max-width: 768px) {
     main {
         position: static;
@@ -122,5 +151,15 @@ h2 {
 
     .intro__greeting, .intro__tagline {
         font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .job__placement {
+        flex-direction: column;
+    }
+
+    .job__date {
+        text-align: left;
     }
 }
